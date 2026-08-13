@@ -92,10 +92,16 @@ header nav {
 	gap: 20px;
 	width: 60%;
 }
+.block__title--small {
+	width: 40%;
+}
 .section {
 	display: flex;
 	flex-direction: row;
 	gap: 150px;
+}
+.section--center {
+	align-items: center;
 }
 .section--column {
 	display: flex;

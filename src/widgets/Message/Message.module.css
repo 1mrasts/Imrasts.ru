@@ -1,0 +1,45 @@
+.message__container {
+	display: flex;
+	flex-direction: column;
+	padding: 50px;
+	width: 100%;
+	justify-content: center;
+
+	background-color: #212121;
+	border-radius: 8px;
+	border: 1px solid #676767;
+}
+.message__input {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.message__input input {
+	outline: 0;
+	border-radius: 8px;
+	border: 1px solid #676767;
+	background-color: #1a1a1a;
+	color: #ffffff;
+	padding: 10px;
+	font-family: 'Inter';
+	font-size: 14px;
+	font-weight: 400;
+	width: 100%;
+}
+.message__input input::placeholder {
+	color: #ffffff;
+}
+.message__input input:focus {
+	outline: 2px solid #578ff4;
+	outline-offset: 2px;
+}
+.message__input button:focus {
+	outline: 2px solid #578ff4;
+	outline-offset: 2px;
+}
+.message__input-interaction {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	width: 100%;
+}

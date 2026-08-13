@@ -79,9 +79,12 @@ button {
 	font-weight: 400;
 	font-size: 12px;
 }
-
 .console {
 	font-family: 'Inconsolata';
 	font-weight: 400;
 	font-size: 17px;
+}
+.chat {
+	font-size: 14px;
+	font-weight: 400;
 }
