@@ -1,6 +1,7 @@
 import Feature from '@/widgets/Feature/Feature'
 import Header from '@/widgets/Header/Header'
 import Hero from '@/widgets/Hero/Hero'
+import Portfolio from '@/widgets/Portfolio/Portfolio'
 import Technologies from '@/widgets/Technologies/Technologies'
 import styles from './page.module.css'
 
@@ -13,6 +14,8 @@ export default function Home() {
 			<Feature />
 			<hr className='hr' />
 			<Technologies />
+			<hr className='hr' />
+			<Portfolio />
 		</main>
 	)
 }

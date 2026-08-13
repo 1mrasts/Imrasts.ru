@@ -2,7 +2,7 @@ import styles from './Technologies.module.css'
 
 export default function Technologies() {
 	return (
-		<section className={`container mt-160 mb-100 ${styles.technologies}`}>
+		<section className={`container mt-160 mb-100 section`}>
 			<div className='block__title'>
 				<h6>ТЕХНОЛОГИИ</h6>
 				<h2>Стек без лишнего слоя.</h2>

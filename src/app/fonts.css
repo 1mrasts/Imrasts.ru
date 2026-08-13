@@ -39,6 +39,7 @@ h3 {
 h4 {
 	font-weight: 700;
 	font-size: 66px;
+	line-height: 66px;
 }
 h5 {
 	font-weight: 700;
@@ -65,7 +66,7 @@ a {
 	font-weight: 700;
 	font-size: 16px;
 	text-decoration: underline;
-	text-underline-offset: 7px;
+	text-underline-offset: 10px;
 }
 button {
 	font-family: 'Inter' !important;

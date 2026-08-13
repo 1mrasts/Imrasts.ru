@@ -1,0 +1,34 @@
+.portfolio__list {
+	display: flex;
+	flex-direction: column;
+	gap: 150px;
+}
+.portfolio__list img {
+	/* max-width: 635px;
+	max-height: 316px; */
+	width: 60%;
+	height: 60%;
+	border-radius: 8px;
+}
+.portfolio__card {
+	display: flex;
+	flex-direction: row;
+	gap: 90px;
+	align-items: center;
+}
+.portfolio__card--reversed {
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 90px;
+	align-items: center;
+}
+.portfolio__card--reversed img {
+	width: 40%;
+	height: 40%;
+}
+.portfolio__text {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	width: 100%;
+}

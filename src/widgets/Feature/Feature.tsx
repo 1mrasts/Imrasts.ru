@@ -27,7 +27,7 @@ export default function Feature() {
 					<div className={styles['feature__block']}>
 						<p className='console-small'>Performance</p>
 						<div className={styles['feature__text']}>
-							<h5>Быстрая загрузка и SEO-основа</h5>
+							<h5>Быстрая загрузка и SEO&#8288;-&#8288;основа</h5>
 							<p>
 								Оптимизация кода, ресурсов, кэширования и семантики страницы.
 							</p>

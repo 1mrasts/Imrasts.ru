@@ -4,7 +4,7 @@
 
 body {
 	background-color: #1a1a1a;
-	height: 5000px;
+	height: 15000px;
 }
 header {
 	background-color: #1a1a1a;
@@ -91,4 +91,14 @@ header nav {
 	flex-direction: column;
 	gap: 20px;
 	width: 60%;
+}
+.section {
+	display: flex;
+	flex-direction: row;
+	gap: 150px;
+}
+.section--column {
+	display: flex;
+	flex-direction: column;
+	gap: 150px;
 }
