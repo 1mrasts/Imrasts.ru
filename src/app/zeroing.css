@@ -5,6 +5,11 @@
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 76px;
+}
+
 /* Убираем внутренние отступы */
 ul[class],
 ol[class] {
@@ -32,7 +37,6 @@ dd {
 /* Выставляем основные настройки по-умолчанию для body */
 body {
 	min-height: 100vh;
-	scroll-behavior: smooth;
 	text-rendering: optimizeSpeed;
 	line-height: 1.5;
 }
@@ -69,6 +73,10 @@ select {
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 @media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
 	* {
 		animation-duration: 0.01ms !important;
 		animation-iteration-count: 1 !important;
