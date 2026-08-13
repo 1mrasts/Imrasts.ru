@@ -1,3 +1,9 @@
+.header__logo {
+	font-size: 18px;
+	font-weight: 300;
+	text-decoration: none;
+}
+
 .header__button {
 	position: relative;
 	display: grid;
@@ -22,6 +28,7 @@
 	line-height: 1;
 	cursor: pointer;
 	transition: color 220ms ease;
+	text-decoration: none;
 }
 
 .header__button-side[data-active='true'] {

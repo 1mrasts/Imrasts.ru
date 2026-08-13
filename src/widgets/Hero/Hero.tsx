@@ -1,20 +1,23 @@
+import type { SiteCopy } from '@/content/site'
 import styles from './Hero.module.css'
 
-export default function Hero() {
+export default function Hero({ copy }: { copy: SiteCopy['hero'] }) {
 	return (
 		<section className={`container mt-60 mb-100 ${styles['hero']}`}>
 			<div className={styles['hero__text']}>
-				<h6>FRONTEND-РАЗРАБОТКА</h6>
+				<h6>{copy.eyebrow}</h6>
 				<h1>
-					<b>Создаю сайты</b>, которыми удобно пользоваться.
+					<b>{copy.titleStrong}</b>
+					{copy.titleRest}
 				</h1>
-				<p>
-					Я Imrasts. Проектирую и разрабатываю адаптивные интерфейсы
-					<br /> для реальных бизнес-задач.
-				</p>
+				<p>{copy.description}</p>
 				<div className={styles['hero__buttons']}>
-					<button className='button button--accent'>Обсудить проект ↗</button>
-					<button className='button'>Смотреть работы</button>
+					<a className='button button--accent' href='#message'>
+						{copy.primaryAction}
+					</a>
+					<a className='button' href='#portfolio'>
+						{copy.secondaryAction}
+					</a>
 				</div>
 			</div>
 			<aside className={styles['hero__tech']}>

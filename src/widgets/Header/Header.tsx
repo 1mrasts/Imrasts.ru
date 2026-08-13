@@ -1,55 +1,64 @@
-'use client'
-
-import { useState } from 'react'
+import type { Locale, SiteCopy } from '@/content/site'
+import Link from 'next/link'
 import styles from './Header.module.css'
 
-export default function Header() {
-	const [language, setLanguage] = useState<'RU' | 'EN'>('RU')
-
+export default function Header({
+	locale,
+	copy,
+}: {
+	locale: Locale
+	copy: SiteCopy['header']
+}) {
 	return (
 		<header>
 			<div className='container header'>
-				<p>
+				<Link className={styles['header__logo']} href={locale === 'ru' ? '/' : '/en'}>
 					imr<span>а́</span>sts
-				</p>
+				</Link>
 
-				<nav>
+				<nav aria-label={locale === 'ru' ? 'Основная навигация' : 'Primary navigation'}>
 					<ul>
 						<li>
-							<a href='#'>Обо мне</a>
+							<a href='#about'>{copy.about}</a>
 						</li>
 						<li>
-							<a href='#'>Стек</a>
+							<a href='#stack'>{copy.stack}</a>
 						</li>
 						<li>
-							<a href='#'>Портфолио</a>
+							<a href='#portfolio'>{copy.portfolio}</a>
 						</li>
 						<li>
-							<a href='#'>Контакты</a>
+							<a href='#contacts'>{copy.contacts}</a>
 						</li>
 					</ul>
 					<div
 						className={styles['header__button']}
 						role='group'
-						aria-label='Выбор языка'
+						aria-label={copy.languageLabel}
 					>
 						<span
 							className={styles['header__button-background']}
-							data-position={language === 'RU' ? 'first' : 'second'}
+							data-position={locale === 'ru' ? 'first' : 'second'}
 							aria-hidden='true'
 						/>
-						{(['RU', 'EN'] as const).map(value => (
-							<button
-								key={value}
-								type='button'
-								className={styles['header__button-side']}
-								data-active={language === value}
-								aria-pressed={language === value}
-								onClick={() => setLanguage(value)}
-							>
-								{value}
-							</button>
-						))}
+						<Link
+							href='/'
+							hrefLang='ru'
+							className={styles['header__button-side']}
+							data-active={locale === 'ru'}
+							aria-current={locale === 'ru' ? 'page' : undefined}
+						>
+							RU
+						</Link>
+						<Link
+							href='/en'
+							hrefLang='en'
+							className={styles['header__button-side']}
+							data-active={locale === 'en'}
+							aria-current={locale === 'en' ? 'page' : undefined}
+						>
+							EN
+						</Link>
 					</div>
 				</nav>
 			</div>
