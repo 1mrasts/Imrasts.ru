@@ -27,3 +27,70 @@
 	overflow: hidden;
 	transform: translateY(-80px);
 }
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+	.hero {
+		gap: 48px;
+	}
+
+	.hero__text {
+		width: 68%;
+	}
+
+	.hero__tech-screen {
+		transform: translateY(-40px);
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+	.hero {
+		flex-direction: column;
+		gap: 56px;
+	}
+
+	.hero__text,
+	.hero__tech {
+		width: 100%;
+	}
+
+	.hero__tech-screen {
+		width: 100%;
+		max-width: none;
+		transform: none;
+	}
+}
+
+@media (max-width: 767px) {
+	.hero {
+		flex-direction: column;
+		gap: 48px;
+	}
+
+	.hero__text,
+	.hero__tech {
+		width: 100%;
+	}
+
+	.hero__text br {
+		display: none;
+	}
+
+	.hero__buttons {
+		flex-direction: column;
+	}
+
+	.hero__buttons button {
+		width: 100%;
+	}
+
+	.hero__tech-screen {
+		width: 100%;
+		max-width: none;
+		padding: 28px 0 28px 24px;
+		transform: none;
+	}
+
+	.hero__tech-screen :global(.hr-col) {
+		right: 64px;
+	}
+}

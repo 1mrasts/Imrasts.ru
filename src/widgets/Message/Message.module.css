@@ -43,3 +43,24 @@
 	gap: 10px;
 	width: 100%;
 }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+	.message__container {
+		padding: 40px;
+	}
+}
+
+@media (max-width: 767px) {
+	.message__container {
+		padding: 24px 20px;
+	}
+
+	.message__input-interaction input {
+		min-width: 0;
+	}
+
+	.message__input-interaction button {
+		flex: 0 0 48px;
+		padding: 0;
+	}
+}
