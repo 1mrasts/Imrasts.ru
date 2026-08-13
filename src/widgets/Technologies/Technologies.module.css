@@ -1,0 +1,21 @@
+.technologies {
+	display: flex;
+	flex-direction: row;
+	gap: 150px;
+}
+.technologies__list {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.technologies__card {
+	padding: 28px 0px;
+	display: grid;
+	grid-template-columns: 300px 1fr;
+	align-items: center;
+	border-top: 1px solid #676767;
+	width: 100%;
+}
+.technologies__card:last-child {
+	border-bottom: 1px solid #676767;
+}

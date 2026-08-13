@@ -46,7 +46,7 @@ h5 {
 	line-height: 55px;
 }
 h6 {
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 12px;
 	line-height: 1;
 }
@@ -54,6 +54,9 @@ p {
 	font-weight: 300;
 	font-size: 18px;
 	color: #eaeaea;
+}
+b {
+	font-weight: 700;
 }
 span {
 	color: #578ff4;
