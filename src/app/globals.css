@@ -93,7 +93,7 @@ header nav {
 	width: 60%;
 }
 .block__title--small {
-	width: 40%;
+	width: 45%;
 }
 .section {
 	display: flex;
@@ -103,6 +103,7 @@ header nav {
 .section--center {
 	align-items: center;
 }
+
 .section--column {
 	display: flex;
 	flex-direction: column;
