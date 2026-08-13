@@ -1,0 +1,36 @@
+.feature__blocks {
+	display: grid;
+	gap: 16px;
+	grid-template-columns: 2fr 1fr;
+}
+.feature__block-side {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+}
+.feature__block {
+	display: flex;
+	flex-direction: column;
+	padding: 52px;
+	gap: 50px;
+	border-radius: 8px;
+	border: 1px solid #676767;
+	background-color: #1a1a1a;
+}
+.feature__block-main {
+	display: flex;
+	flex-direction: column;
+	background-color: #212121;
+}
+.feature__text {
+	display: flex;
+	flex-direction: column;
+	width: 85%;
+	gap: 20px;
+}
+
+.feature__text-main {
+	display: flex;
+	flex-direction: column;
+	width: 65%;
+	gap: 20px;
+}

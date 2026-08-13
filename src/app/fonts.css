@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+a,
+ul,
+li {
+	font-family: 'Inter';
+	color: #ffffff;
+	text-decoration: none;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	font-family: 'Inter';
+	font-weight: 400;
+	font-size: 126px;
+	color: #ffffff;
+	line-height: 116px;
+}
+h2 {
+	font-weight: 700;
+	font-size: 88px;
+	line-height: 88px;
+}
+h3 {
+	font-weight: 700;
+	font-size: 74px;
+}
+h4 {
+	font-weight: 700;
+	font-size: 66px;
+}
+h5 {
+	font-weight: 700;
+	font-size: 52px;
+	line-height: 55px;
+}
+h6 {
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 1;
+}
+p {
+	font-weight: 300;
+	font-size: 18px;
+	color: #eaeaea;
+}
+span {
+	color: #578ff4;
+}
+a {
+	font-weight: 700;
+	font-size: 16px;
+	text-decoration: underline;
+	text-underline-offset: 7px;
+}
+button {
+	font-family: 'Inter' !important;
+	font-size: 14px;
+	font-weight: 700 !important;
+	line-height: 1 !important;
+}
+.console-small {
+	font-family: 'Inconsolata';
+	font-weight: 400;
+	font-size: 12px;
+}
+
+.console {
+	font-family: 'Inconsolata';
+	font-weight: 400;
+	font-size: 17px;
+}
