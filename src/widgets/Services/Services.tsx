@@ -1,12 +1,8 @@
+import Link from 'next/link'
 import type { SiteCopy } from '@/content/site'
 import styles from './Services.module.css'
 
 export default function Services({ copy }: { copy: SiteCopy['services'] }) {
-	const columns = [
-		[copy.cards[0], copy.cards[2]],
-		[copy.cards[1], copy.cards[3]],
-	]
-
 	return (
 		<section
 			id='services'
@@ -19,33 +15,29 @@ export default function Services({ copy }: { copy: SiteCopy['services'] }) {
 			</div>
 
 			<div className={styles.services__list}>
-				{columns.map((cards, columnIndex) => (
-					<div className={styles.services__column} key={columnIndex}>
-						{cards.map(card => (
-							<article
-								className={`${styles.service__block} ${
-									columnIndex === 0 ? styles['service__block-main'] : ''
-								}`}
-								key={card.number}
-							>
-								<div className={styles.service__tags}>
-									<p className='console-small'>{card.number}</p>
-									<p className='console-small'>{card.label}</p>
-								</div>
+				{copy.cards.map((card, cardIndex) => (
+					<article
+						className={`${styles.service__block} ${
+							cardIndex % 2 === 0 ? styles['service__block-main'] : ''
+						}`}
+						key={card.number}
+					>
+						<div className={styles.service__tags}>
+							<p className='console-small'>{card.number}</p>
+							<p className='console-small'>{card.label}</p>
+						</div>
 
-								<div className={styles.service__text}>
-									<div className={styles.service__text_main}>
-										<h5>{card.title}</h5>
-										<p>{card.description}</p>
-									</div>
+						<div className={styles.service__text}>
+							<div className={styles.service__text_main}>
+								<h5>{card.title}</h5>
+								<p>{card.description}</p>
+							</div>
 
-									<a className='console' href={card.href}>
-										{copy.linkLabel} <span aria-hidden='true'>↗</span>
-									</a>
-								</div>
-							</article>
-						))}
-					</div>
+							<Link className='console' href={card.href}>
+								{copy.linkLabel} <span aria-hidden='true'>↗</span>
+							</Link>
+						</div>
+					</article>
 				))}
 			</div>
 		</section>
