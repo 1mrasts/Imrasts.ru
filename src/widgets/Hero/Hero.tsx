@@ -38,8 +38,8 @@ export default function Hero({ copy }: { copy: SiteCopy['hero'] }) {
 								<span>Interface</span>
 							</h3>
 						</li>
-						<hr className='hr-col' />
 					</ul>
+					<hr className='hr-col' />
 				</div>
 			</aside>
 		</section>

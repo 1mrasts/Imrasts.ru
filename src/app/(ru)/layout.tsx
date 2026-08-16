@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 	robots: { index: true, follow: true },
 	alternates: {
 		canonical: '/',
-		languages: { ru: '/', en: '/en' },
+		languages: { ru: '/', en: '/en', 'x-default': '/' },
 	},
 	openGraph: {
 		url: '/',
@@ -29,6 +29,13 @@ export const metadata: Metadata = {
 				alt: 'Imrasts — адаптивная вёрстка сайтов по макетам Figma',
 			},
 		],
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: 'Вёрстка сайтов по макетам Figma — HTML, CSS, React | Imrasts',
+		description:
+			'Frontend-разработка адаптивных лендингов и бизнес-сайтов на React и TypeScript.',
+		images: ['/og-image.webp'],
 	},
 	icons: { icon: '/favicon.ico' },
 }

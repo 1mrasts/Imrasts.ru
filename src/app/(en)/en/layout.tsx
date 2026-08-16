@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 	robots: { index: true, follow: true },
 	alternates: {
 		canonical: '/en',
-		languages: { ru: '/', en: '/en' },
+		languages: { ru: '/', en: '/en', 'x-default': '/' },
 	},
 	openGraph: {
 		url: '/en',
@@ -29,6 +29,13 @@ export const metadata: Metadata = {
 				alt: 'Imrasts — responsive frontend development',
 			},
 		],
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: 'Frontend Development — HTML, CSS, React | Imrasts',
+		description:
+			'Responsive frontend development for landing pages and business websites with React and TypeScript.',
+		images: ['/og-image.webp'],
 	},
 	icons: { icon: '/favicon.ico' },
 }
