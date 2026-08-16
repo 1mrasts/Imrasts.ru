@@ -16,9 +16,27 @@
 	color: white;
 	padding: 15px 0px;
 	border-bottom: 1px solid #676767;
+	transition:
+		border-color 180ms ease,
+		padding 180ms ease;
 }
 .social__card p {
 	color: white;
+	transition: color 180ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.social__card:hover,
+	.social__card:focus-visible {
+		border-color: #578ff4;
+		padding-right: 8px;
+		padding-left: 8px;
+	}
+
+	.social__card:hover p,
+	.social__card:focus-visible p {
+		color: #578ff4;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {

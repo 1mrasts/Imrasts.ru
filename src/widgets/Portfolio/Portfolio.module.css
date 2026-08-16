@@ -33,10 +33,14 @@
 	width: 100%;
 }
 .portfolio__text a {
-	transition: all 200ms ease-in-out;
+	transition: color 180ms ease;
 }
-.portfolio__text a:hover {
-	text-shadow: 0 0 5px #ffffff;
+
+@media (hover: hover) and (pointer: fine) {
+	.portfolio__text a:hover,
+	.portfolio__text a:focus-visible {
+		color: #578ff4;
+	}
 }
 
 @media (min-width: 1200px) and (max-width: 1599px) {

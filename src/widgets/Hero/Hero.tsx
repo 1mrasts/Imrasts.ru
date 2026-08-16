@@ -3,7 +3,11 @@ import styles from './Hero.module.css'
 
 export default function Hero({ copy }: { copy: SiteCopy['hero'] }) {
 	return (
-		<section className={`container mt-60 mb-100 ${styles['hero']}`}>
+		<section
+			id='about'
+			data-reveal-section
+			className={`container mt-60 mb-100 ${styles['hero']}`}
+		>
 			<div className={styles['hero__text']}>
 				<h6>{copy.eyebrow}</h6>
 				<h1>

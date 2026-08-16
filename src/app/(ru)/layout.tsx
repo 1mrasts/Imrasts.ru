@@ -7,7 +7,7 @@ import '../zeroing.css'
 export const metadata: Metadata = {
 	title: 'Вёрстка сайтов по макетам Figma — HTML, CSS, React | Imrasts',
 	description:
-		'Адаптивная frontend-разработка лендингов и бизнес-сайтов.',
+		'Frontend-разработка адаптивных лендингов и бизнес-сайтов на React и TypeScript: быстрая загрузка, доступность и удобные интерфейсы.',
 	metadataBase: new URL('https://imrasts.ru'),
 	robots: { index: true, follow: true },
 	alternates: {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 			},
 		],
 	},
-	icons: { icon: '/favicon.svg' },
+	icons: { icon: '/favicon.ico' },
 }
 
 export default function RussianLayout({ children }: { children: React.ReactNode }) {

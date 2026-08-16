@@ -4,7 +4,11 @@ import styles from './Message.module.css'
 
 export default function Message({ copy }: { copy: SiteCopy['message'] }) {
 	return (
-		<section id='message' className='container mt-160 mb-100 section section--center'>
+		<section
+			id='message'
+			data-reveal-section
+			className='container mt-160 mb-100 section section--center'
+		>
 			<div className='block__title block__title--small'>
 				<h2>{copy.title}</h2>
 				<p>{copy.description}</p>

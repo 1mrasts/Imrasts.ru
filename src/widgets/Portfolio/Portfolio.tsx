@@ -1,9 +1,9 @@
 import type { SiteCopy } from '@/content/site'
 import Image from 'next/image'
-import nft from '../../assets/nft.png'
-import payday from '../../assets/payday.png'
-import sertexity from '../../assets/sertexity.png'
-import todo from '../../assets/todo.png'
+import nft from '../../../public/nft.png'
+import payday from '../../../public/payday.png'
+import sertexity from '../../../public/sertexity.png'
+import todo from '../../../public/todo.png'
 import styles from './Portfolio.module.css'
 
 const projects = [
@@ -35,7 +35,11 @@ const projects = [
 
 export default function Portfolio({ copy }: { copy: SiteCopy['portfolio'] }) {
 	return (
-		<section className={`container mt-160 mb-100 section--column`}>
+		<section
+			id='portfolio'
+			data-reveal-section
+			className='container mt-160 mb-100 section--column'
+		>
 			<div className='block__title'>
 				<h2>{copy.title}</h2>
 				<p>{copy.description}</p>
@@ -52,7 +56,15 @@ export default function Portfolio({ copy }: { copy: SiteCopy['portfolio'] }) {
 							}
 							key={project.title}
 						>
-							<Image src={project.image} alt={localizedProject.alt} />
+							<Image
+								src={project.image}
+								alt={localizedProject.alt}
+								sizes={
+									index % 2 === 0
+										? '(max-width: 767px) calc(100vw - 40px), (max-width: 1199px) calc(100vw - 80px), (max-width: 1599px) 60vw, 828px'
+										: '(max-width: 767px) calc(100vw - 40px), (max-width: 1199px) calc(100vw - 80px), (max-width: 1599px) 40vw, 552px'
+								}
+							/>
 							<div className={styles['portfolio__text']}>
 								<p className='console'>{project.label}</p>
 								<h4>{project.title}</h4>

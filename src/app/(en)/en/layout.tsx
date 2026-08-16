@@ -7,7 +7,7 @@ import '../../zeroing.css'
 export const metadata: Metadata = {
 	title: 'Frontend Development — HTML, CSS, React | Imrasts',
 	description:
-		'Responsive frontend development for landing pages and business websites.',
+		'Responsive frontend development for landing pages and business websites with React and TypeScript, focused on speed, accessibility, and usability.',
 	metadataBase: new URL('https://imrasts.ru'),
 	robots: { index: true, follow: true },
 	alternates: {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 			},
 		],
 	},
-	icons: { icon: '/favicon.svg' },
+	icons: { icon: '/favicon.ico' },
 }
 
 export default function EnglishLayout({ children }: { children: React.ReactNode }) {

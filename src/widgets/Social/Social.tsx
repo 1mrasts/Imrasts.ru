@@ -3,7 +3,11 @@ import styles from './Social.module.css'
 
 export default function Social({ copy }: { copy: SiteCopy['social'] }) {
 	return (
-		<section id='contacts' className='container mt-160 mb-100 section'>
+		<section
+			id='contacts'
+			data-reveal-section
+			className='container mt-160 mb-100 section'
+		>
 			<div className='block__title--small'>
 				<h2>{copy.title}</h2>
 			</div>

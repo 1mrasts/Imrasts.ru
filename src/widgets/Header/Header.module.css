@@ -2,6 +2,14 @@
 	font-size: 18px;
 	font-weight: 300;
 	text-decoration: none;
+	transition: color 180ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.header__logo:hover,
+	.header__logo:focus-visible {
+		color: #578ff4;
+	}
 }
 
 .header__button {
@@ -22,7 +30,7 @@
 	border: 0;
 	background: transparent;
 	color: #f4f4f4;
-	font-family: 'Inter';
+	font-family: var(--font-inter), sans-serif;
 	font-size: 12px;
 	font-weight: 700;
 	line-height: 1;

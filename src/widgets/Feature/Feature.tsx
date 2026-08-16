@@ -5,7 +5,7 @@ export default function Feature({ copy }: { copy: SiteCopy['features'] }) {
 	const [mainCard, ...sideCards] = copy.cards
 
 	return (
-		<section className='container mt-160 mb-100 block'>
+		<section data-reveal-section className='container mt-160 mb-100 block'>
 			<div className='block__title'>
 				<h2>{copy.title}</h2>
 				<p>{copy.description}</p>

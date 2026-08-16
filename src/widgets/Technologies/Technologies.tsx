@@ -7,7 +7,11 @@ export default function Technologies({
 	copy: SiteCopy['technologies']
 }) {
 	return (
-		<section className={`container mt-160 mb-100 section`}>
+		<section
+			id='stack'
+			data-reveal-section
+			className='container mt-160 mb-100 section'
+		>
 			<div className='block__title'>
 				<h6>{copy.eyebrow}</h6>
 				<h2>{copy.title}</h2>
