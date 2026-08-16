@@ -9,6 +9,7 @@ import Portfolio from '@/widgets/Portfolio/Portfolio'
 import SectionReveal from '@/widgets/SectionReveal/SectionReveal'
 import Social from '@/widgets/Social/Social'
 import Technologies from '@/widgets/Technologies/Technologies'
+import Services from '../Services/Services'
 
 export default function SitePage({ locale }: { locale: Locale }) {
 	const copy = siteCopy[locale]
@@ -20,6 +21,8 @@ export default function SitePage({ locale }: { locale: Locale }) {
 			<Hero copy={copy.hero} />
 			<hr className='hr' />
 			<Feature copy={copy.features} />
+			<hr className='hr' />
+			<Services copy={copy.services} />
 			<hr className='hr' />
 			<Technologies copy={copy.technologies} />
 			<hr className='hr' />

@@ -21,6 +21,18 @@ export type SiteCopy = {
 		description: string
 		cards: Array<{ label: string; title: string; description: string }>
 	}
+	services: {
+		title: string
+		description: string
+		linkLabel: string
+		cards: Array<{
+			number: string
+			label: string
+			title: string
+			description: string
+			href: string
+		}>
+	}
 	technologies: {
 		eyebrow: string
 		title: string
@@ -84,6 +96,46 @@ export const siteCopy: Record<Locale, SiteCopy> = {
 					title: 'Интерфейс с ясной обратной связью',
 					description:
 						'Интерактивные элементы, плавные переходы и доступные состояния управления.',
+				},
+			],
+		},
+		services: {
+			title: 'Услуги.',
+			description:
+				'Разрабатываю современные и адаптивные веб-интерфейсы: переношу дизайн из Figma в точную вёрстку, собираю frontend на React и улучшаю уже работающие сайты.',
+			linkLabel: 'Подробнее об услуге',
+			cards: [
+				{
+					number: '01',
+					label: 'FIGMA → HTML',
+					title: 'Вёрстка сайта по макету Figma',
+					description:
+						'Точная и семантическая реализация дизайна на HTML и CSS.',
+					href: 'figma-to-html',
+				},
+				{
+					number: '02',
+					label: 'RESPONSIVE',
+					title: 'Адаптивная вёрстка лендинга',
+					description:
+						'Продуманная версия для компьютеров, планшетов и смартфонов.',
+					href: 'responsive',
+				},
+				{
+					number: '03',
+					label: 'REACT / NEXT.JS',
+					title: 'Frontend-разработка на React',
+					description:
+						'Интерактивные интерфейсы и компоненты на React, Next.js и TypeScript.',
+					href: 'react-development',
+				},
+				{
+					number: '04',
+					label: 'HTML / CSS / JS',
+					title: 'Доработка существующего сайта',
+					description:
+						'Исправление ошибок, адаптивности и поведения интерфейса без полной переработки.',
+					href: 'fix-site',
 				},
 			],
 		},
@@ -175,6 +227,46 @@ export const siteCopy: Record<Locale, SiteCopy> = {
 					title: 'Interfaces with clear feedback',
 					description:
 						'Interactive elements, smooth transitions, and accessible control states.',
+				},
+			],
+		},
+		services: {
+			title: 'Services.',
+			description:
+				'I build modern, responsive web interfaces: turning Figma designs into precise markup, developing frontends with React, and improving existing websites.',
+			linkLabel: 'Learn more about this service',
+			cards: [
+				{
+					number: '01',
+					label: 'FIGMA → HTML',
+					title: 'Website development from a Figma design',
+					description:
+						'Precise, semantic implementation of a design with HTML and CSS.',
+					href: 'figma-to-html',
+				},
+				{
+					number: '02',
+					label: 'RESPONSIVE',
+					title: 'Responsive landing page development',
+					description:
+						'Carefully designed for desktops, tablets, and smartphones.',
+					href: 'responsive',
+				},
+				{
+					number: '03',
+					label: 'REACT / NEXT.JS',
+					title: 'Frontend development with React',
+					description:
+						'Interactive interfaces and components built with React, Next.js, and TypeScript.',
+					href: 'react-development',
+				},
+				{
+					number: '04',
+					label: 'HTML / CSS / JS',
+					title: 'Existing website improvements',
+					description:
+						'Fixing bugs, responsiveness, and interface behavior without a full rebuild.',
+					href: 'fix-site',
 				},
 			],
 		},

@@ -1,0 +1,80 @@
+.services__list {
+	display: grid;
+	grid-template-columns: 2fr 1.15fr;
+	gap: 14px;
+}
+
+/* Левая и правая независимые сетки */
+.services__column {
+	display: grid;
+	gap: 14px;
+}
+
+/* Соотношение высот */
+.services__column:first-child {
+	grid-template-rows: 1fr 1.55fr;
+}
+
+.services__column:last-child {
+	grid-template-rows: 1.25fr 1fr;
+}
+
+/* Общая карточка */
+.service__block {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	padding: clamp(32px, 3vw, 52px);
+
+	border-radius: 8px;
+	border: 1px solid #676767;
+
+	background-color: #1a1a1a;
+	transition:
+		border-color 180ms ease,
+		transform 180ms ease;
+}
+.service__block-main {
+	background-color: #282828;
+}
+
+/* Верхняя информация */
+.service__tags {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+/* Нижний текст */
+.service__text {
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+}
+
+.service__text_main {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.service__text a {
+	font-weight: 400;
+	text-decoration: none;
+	font-family: var(--font-inconsolataRus), monospace;
+	transition: color 180ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.service__block:hover,
+	.service__block:focus-within {
+		border-color: #578ff4;
+		transform: translateY(-2px);
+	}
+
+	.service__block:hover .service__text a,
+	.service__block:focus-within .service__text a {
+		color: #578ff4;
+	}
+}

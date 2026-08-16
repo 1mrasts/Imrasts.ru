@@ -1,5 +1,5 @@
+import { inconsolata, inconsolataRus, inter } from '@/app/fonts'
 import type { Locale } from '@/content/site'
-import { inconsolata, inter } from '@/app/fonts'
 
 const structuredData = {
 	ru: {
@@ -74,7 +74,10 @@ export default function RootDocument({
 	const jsonLd = createJsonLd(locale)
 
 	return (
-		<html lang={locale} className={`${inter.variable} ${inconsolata.variable}`}>
+		<html
+			lang={locale}
+			className={`${inter.variable} ${inconsolata.variable} ${inconsolataRus.variable}`}
+		>
 			<body>
 				{children}
 				<script
