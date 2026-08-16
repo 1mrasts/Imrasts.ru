@@ -111,7 +111,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
 					title: 'Вёрстка сайта по макету Figma',
 					description:
 						'Точная и семантическая реализация дизайна на HTML и CSS.',
-					href: 'figma-to-html',
+					href: '/figma-to-html',
 				},
 				{
 					number: '02',
@@ -119,7 +119,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
 					title: 'Адаптивная вёрстка лендинга',
 					description:
 						'Продуманная версия для компьютеров, планшетов и смартфонов.',
-					href: 'responsive',
+					href: '/responsive',
 				},
 				{
 					number: '03',
@@ -127,7 +127,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
 					title: 'Frontend-разработка на React',
 					description:
 						'Интерактивные интерфейсы и компоненты на React, Next.js и TypeScript.',
-					href: 'react-development',
+					href: '/react-development',
 				},
 				{
 					number: '04',
@@ -135,7 +135,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
 					title: 'Доработка существующего сайта',
 					description:
 						'Исправление ошибок, адаптивности и поведения интерфейса без полной переработки.',
-					href: 'fix-site',
+					href: '/fix-site',
 				},
 			],
 		},
@@ -242,7 +242,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
 					title: 'Website development from a Figma design',
 					description:
 						'Precise, semantic implementation of a design with HTML and CSS.',
-					href: 'figma-to-html',
+					href: '/en/figma-to-html',
 				},
 				{
 					number: '02',
@@ -250,7 +250,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
 					title: 'Responsive landing page development',
 					description:
 						'Carefully designed for desktops, tablets, and smartphones.',
-					href: 'responsive',
+					href: '/en/responsive',
 				},
 				{
 					number: '03',
@@ -258,7 +258,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
 					title: 'Frontend development with React',
 					description:
 						'Interactive interfaces and components built with React, Next.js, and TypeScript.',
-					href: 'react-development',
+					href: '/en/react-development',
 				},
 				{
 					number: '04',
@@ -266,7 +266,7 @@ export const siteCopy: Record<Locale, SiteCopy> = {
 					title: 'Existing website improvements',
 					description:
 						'Fixing bugs, responsiveness, and interface behavior without a full rebuild.',
-					href: 'fix-site',
+					href: '/en/fix-site',
 				},
 			],
 		},

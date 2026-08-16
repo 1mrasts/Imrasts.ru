@@ -2,7 +2,6 @@ import type { Locale } from '@/content/site'
 import { siteCopy } from '@/content/site'
 import Feature from '@/widgets/Feature/Feature'
 import Footer from '@/widgets/Footer/Footer'
-import Header from '@/widgets/Header/Header'
 import Hero from '@/widgets/Hero/Hero'
 import Message from '@/widgets/Message/Message'
 import Portfolio from '@/widgets/Portfolio/Portfolio'
@@ -16,7 +15,6 @@ export default function SitePage({ locale }: { locale: Locale }) {
 
 	return (
 		<main>
-			<Header locale={locale} copy={copy.header} />
 			<SectionReveal />
 			<Hero copy={copy.hero} />
 			<hr className='hr' />

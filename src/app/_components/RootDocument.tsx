@@ -1,20 +1,15 @@
 import { inconsolata, inconsolataRus, inter } from '@/app/fonts'
-import type { Locale } from '@/content/site'
+import { siteCopy, type Locale } from '@/content/site'
+import Header from '@/widgets/Header/Header'
 
 const structuredData = {
 	ru: {
 		pageUrl: 'https://imrasts.ru/',
-		pageName: 'Imrasts — Frontend-разработчик',
-		pageDescription:
-			'Портфолио frontend-разработчика: адаптивные лендинги и бизнес-сайты на React и TypeScript.',
 		personDescription:
 			'Frontend-разработчик, создающий быстрые, доступные и адаптивные интерфейсы для бизнеса.',
 	},
 	en: {
 		pageUrl: 'https://imrasts.ru/en',
-		pageName: 'Imrasts — Frontend Developer',
-		pageDescription:
-			'Frontend developer portfolio featuring responsive landing pages and business websites built with React and TypeScript.',
 		personDescription:
 			'Frontend developer building fast, accessible, and responsive interfaces for businesses.',
 	},
@@ -24,7 +19,6 @@ function createJsonLd(locale: Locale) {
 	const content = structuredData[locale]
 	const websiteId = 'https://imrasts.ru/#website'
 	const personId = 'https://imrasts.ru/#person'
-	const profileId = `${content.pageUrl}#profile`
 
 	return {
 		'@context': 'https://schema.org',
@@ -35,16 +29,6 @@ function createJsonLd(locale: Locale) {
 				url: 'https://imrasts.ru/',
 				name: 'Imrasts',
 				inLanguage: ['ru', 'en'],
-			},
-			{
-				'@type': 'ProfilePage',
-				'@id': profileId,
-				url: content.pageUrl,
-				name: content.pageName,
-				description: content.pageDescription,
-				inLanguage: locale,
-				isPartOf: { '@id': websiteId },
-				mainEntity: { '@id': personId },
 			},
 			{
 				'@type': 'Person',
@@ -72,6 +56,7 @@ export default function RootDocument({
 	locale: Locale
 }) {
 	const jsonLd = createJsonLd(locale)
+	const copy = siteCopy[locale]
 
 	return (
 		<html
@@ -79,11 +64,12 @@ export default function RootDocument({
 			className={`${inter.variable} ${inconsolata.variable} ${inconsolataRus.variable}`}
 		>
 			<body>
+				<Header locale={locale} copy={copy['header']} />
 				{children}
 				<script
 					type='application/ld+json'
 					dangerouslySetInnerHTML={{
-						__html: JSON.stringify(jsonLd),
+						__html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
 					}}
 				/>
 			</body>

@@ -1,5 +1,8 @@
+'use client'
+
 import type { Locale, SiteCopy } from '@/content/site'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import styles from './Header.module.css'
 
 export default function Header({
@@ -9,6 +12,39 @@ export default function Header({
 	locale: Locale
 	copy: SiteCopy['header']
 }) {
+	const pathname = usePathname()
+	const localizedHome = locale === 'ru' ? '/' : '/en'
+	const servicePath = pathname.startsWith('/en') ? pathname.slice(3) || '/' : pathname
+	const russianPath = servicePath
+	const englishPath = servicePath === '/' ? '/en' : `/en${servicePath}`
+	const routeSlug = servicePath.split('/').filter(Boolean)[0]
+	const isServicePage = [
+		'figma-to-html',
+		'responsive',
+		'react-development',
+		'fix-site',
+	].includes(routeSlug)
+	const navigation = isServicePage
+		? locale === 'ru'
+			? [
+					{ label: 'Услуга', href: '#service' },
+					{ label: 'Что входит', href: '#scope' },
+					{ label: 'Процесс', href: '#process' },
+					{ label: 'Контакты', href: '#contacts' },
+				]
+			: [
+					{ label: 'Service', href: '#service' },
+					{ label: 'Scope', href: '#scope' },
+					{ label: 'Process', href: '#process' },
+					{ label: 'Contacts', href: '#contacts' },
+				]
+		: [
+				{ label: copy.about, href: `${localizedHome}#about` },
+				{ label: copy.stack, href: `${localizedHome}#stack` },
+				{ label: copy.portfolio, href: `${localizedHome}#portfolio` },
+				{ label: copy.contacts, href: `${localizedHome}#contacts` },
+			]
+
 	return (
 		<header>
 			<div className='container header'>
@@ -18,18 +54,11 @@ export default function Header({
 
 				<nav aria-label={locale === 'ru' ? 'Основная навигация' : 'Primary navigation'}>
 					<ul>
-						<li>
-							<a href='#about'>{copy.about}</a>
-						</li>
-						<li>
-							<a href='#stack'>{copy.stack}</a>
-						</li>
-						<li>
-							<a href='#portfolio'>{copy.portfolio}</a>
-						</li>
-						<li>
-							<a href='#contacts'>{copy.contacts}</a>
-						</li>
+						{navigation.map(item => (
+							<li key={item.href}>
+								<a href={item.href}>{item.label}</a>
+							</li>
+						))}
 					</ul>
 					<div
 						className={styles['header__button']}
@@ -42,7 +71,7 @@ export default function Header({
 							aria-hidden='true'
 						/>
 						<Link
-							href='/'
+							href={russianPath}
 							hrefLang='ru'
 							className={styles['header__button-side']}
 							data-active={locale === 'ru'}
@@ -51,7 +80,7 @@ export default function Header({
 							RU
 						</Link>
 						<Link
-							href='/en'
+							href={englishPath}
 							hrefLang='en'
 							className={styles['header__button-side']}
 							data-active={locale === 'en'}
