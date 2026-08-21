@@ -1,5 +1,5 @@
-import type { MetadataRoute } from 'next'
 import { serviceSlugs } from '@/content/service-pages'
+import type { MetadataRoute } from 'next'
 
 const languages = {
 	ru: 'https://imrasts.ru/',
@@ -7,6 +7,7 @@ const languages = {
 	'x-default': 'https://imrasts.ru/',
 }
 
+// TODO: Сделать lastmodified с реальной датой последнего существенного обновления
 export default function sitemap(): MetadataRoute.Sitemap {
 	const servicePages: MetadataRoute.Sitemap = serviceSlugs.flatMap(slug => [
 		{
